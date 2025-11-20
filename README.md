@@ -1,1 +1,1 @@
-# DBC-Ontology
+# DBC-CAN Database Ontology
