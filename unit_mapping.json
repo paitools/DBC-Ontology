@@ -1,0 +1,25 @@
+
+{
+  "l": "L",
+  "L": "L",
+  "liter": "L",
+  "grad": "DEG",
+  "grad celsius": "DEG_C",
+  "°C": "DEG_C",
+  "bar": "BAR",
+  "a": "A",
+  "A": "A",
+  "v": "V",
+  "V": "V",
+  "kw": "KiloW",
+  "kW": "KiloW",
+  "kwh": "KiloW-HR",
+  "kWh": "KiloW-HR",
+  "hz": "HZ",
+  "Hz": "HZ",
+  "1/min": "REV-PER-MIN",
+  "%": "PERCENT",
+  "percent": "PERCENT",
+  "aus/an": "BOOLEAN",
+  "": ""
+}
