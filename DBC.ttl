@@ -2,17 +2,23 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@prefix dbc: <http://example.org/dbc#> . 
+@prefix dbc: <https://paitools.github.io/DBCOntology/DBC.owl#> . 
 
-<http://example.org/dbc-ontology> a owl:Ontology ;
+<https://paitools.github.io/DBCOntology/DBC.owl> a owl:Ontology ;
 
-    owl:imports <http://www.w3.org/ns/sosa/> ,
-                <http://www.w3.org/ns/ssn/> ,
-                <http://qudt.org/3.0.0/schema/qudt> .
+	dct:title "DBC – CAN Database Ontology" ;
+	dct:created "2025-06-16"^^xsd:date ;
+	rdfs:comment "The DBC Ontology provides a semantic model for representing CAN bus messaging, encoding, and observations. It extends the W3C SSN/SOSA ontology to capture CAN database (DBC)-specific concepts such as messages, signals, logs, and ECUs. Designed for the transportation domain, the ontology supports advanced analytics, condition monitoring, predictive maintenance, and real-time diagnostics."@en ;
+	dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+
+	owl:imports <http://www.w3.org/ns/sosa/> ,
+		        <http://www.w3.org/ns/ssn/> ,
+		        <http://qudt.org/3.0.0/schema/qudt> .
 
 #################################################################
 
@@ -230,4 +236,3 @@ sosa:resultTime a owl:DatatypeProperty ;
     rdfs:domain sosa:Observation ;
     rdfs:range xsd:dateTime ;
     rdfs:label "result time" .
-
