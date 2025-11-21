@@ -1,0 +1,17 @@
+# What was the average value of the fuel tank 1 signal in the last three days? 
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex:   <http://example.org/individuals#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT (AVG(?value) AS ?meanValue)
+WHERE {
+  ?signallog a dbc:SignalLog ;
+             sosa:hasSimpleResult ?value ;
+             sosa:observedProperty ex:Kraftstofftank01 ;
+             sosa:resultTime ?timestamp .
+
+  FILTER(?timestamp >= "2021-01-01T00:00:00"^^xsd:dateTime)
+}
+

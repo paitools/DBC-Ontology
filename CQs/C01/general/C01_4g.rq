@@ -1,0 +1,12 @@
+# Which properties are defined for a CAN message?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?property
+WHERE {
+    ?message a dbc:Message ;
+             ?property ?value .
+
+}
+

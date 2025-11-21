@@ -1,0 +1,14 @@
+# Which units and encoding schemas are used for signal decoding?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+
+SELECT ?signal ?unit ?encoding
+WHERE {
+    ?signal a dbc:Signal ;
+            qudt:hasUnit ?unit ;
+			dbc:decodedVia ?encoding .
+
+}
+

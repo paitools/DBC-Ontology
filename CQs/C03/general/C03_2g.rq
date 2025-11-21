@@ -1,0 +1,11 @@
+# What are the core components of a CAN message log?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?properties
+WHERE {
+    ?messagelog a dbc:MessageLog ;
+                ?properties ?value	
+}
+

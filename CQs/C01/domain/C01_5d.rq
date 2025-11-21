@@ -1,0 +1,11 @@
+# Which signals are targeting the Unknown receiver node? 
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?signal 
+WHERE {
+    ?signal dbc:hasReceiver ex:Unknown .
+}
+ORDER BY ASC(?signal)

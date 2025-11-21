@@ -1,0 +1,12 @@
+# Which signals carry voltage measurements?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?signal 
+WHERE {
+    ?signal qudt:hasUnit ex:V .
+
+}
+

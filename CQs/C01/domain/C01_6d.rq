@@ -1,0 +1,13 @@
+# What is the decimal identifier (decID) of the bridge battery voltage signal? 
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?decID 
+WHERE {
+	ex:SpannungBrueckenbatterie dbc:isPartOf ?message .
+	?message dbc:hasDecID ?decID .  
+}
+

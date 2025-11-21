@@ -1,0 +1,11 @@
+# Which types of observations are represented in the system?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?observation
+WHERE {
+    ?observation rdfs:subClassOf sosa:Observation .
+}
+

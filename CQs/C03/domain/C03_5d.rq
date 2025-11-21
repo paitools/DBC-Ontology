@@ -1,0 +1,16 @@
+# What is the maximum port fan RPM observed on 01.01.2021 after 2pm?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex:   <http://example.org/individuals#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT (MAX(?rpmvalue) AS ?maxRPM)
+WHERE {
+  ?signallog a dbc:SignalLog ;
+             sosa:observedProperty ex:DrehzahlLuefterStb ;
+             sosa:hasSimpleResult ?rpmvalue ;
+             sosa:resultTime ?timestamp .
+
+  FILTER(?timestamp > "2021-01-01T14:00:00"^^xsd:dateTime)
+}

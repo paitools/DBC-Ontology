@@ -1,0 +1,11 @@
+# How are signal log observations represented in the system?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?property
+WHERE {
+    ?signallog a dbc:SignalLog ;
+               ?property ?value .
+}
+LIMIT 10

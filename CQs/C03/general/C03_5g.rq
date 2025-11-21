@@ -1,0 +1,15 @@
+# Which measurement units are assigned to the results of signal log observations?s
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?unit
+WHERE {
+    ?signallog a dbc:SignalLog ;
+            sosa:hasSimpleResult ?value ;
+			sosa:observedProperty ?signal .
+	?signal qudt:hasUnit ?unit .
+}
+

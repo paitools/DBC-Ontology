@@ -1,0 +1,42 @@
+# Which signals have measured values at least 20 percent higher than the average in the last 10 minutes?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ex: <http://example.org/individuals#>
+PREFIX dbc:  <http://example.org/dbc#>
+
+SELECT ?signal ?signalvalue ?meanvalue
+WHERE {
+  {
+    # Subquery: average per signal in last 10 minutes before reference time
+    SELECT ?signal (AVG(?val) AS ?meanvalue)
+    WHERE {
+      ?log sosa:observedProperty ?signal ;
+           sosa:hasSimpleResult ?val ;
+           sosa:resultTime ?t .
+      FILTER(?t >= "2021-03-01T13:49:00"^^xsd:dateTime &&
+             ?t <= "2021-03-01T13:59:00"^^xsd:dateTime)
+    }
+    GROUP BY ?signal
+  }
+
+  # Main query: actual values in same window
+  ?signallog sosa:observedProperty ?signal ;
+             sosa:hasSimpleResult ?signalvalue ;
+             sosa:resultTime ?timestamp .
+  FILTER(?timestamp >= "2021-03-01T13:49:00"^^xsd:dateTime &&
+         ?timestamp <= "2021-03-01T13:59:00"^^xsd:dateTime)
+
+  FILTER(?signalvalue > 1.2 * ?meanvalue)
+}
+ORDER BY ?timestamp
+
+
+
+
+
+
+
+
+
+

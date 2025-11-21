@@ -1,0 +1,12 @@
+# Which CAN message encodes the fire pump pressure signal?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?message 
+WHERE {
+    ?message dbc:hasSignal ex:DruckFeuerloeschpumpe .
+
+}
+

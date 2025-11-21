@@ -1,0 +1,13 @@
+# What is the encoding schema of the inclination signal?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?encoding ?property ?value
+WHERE {
+    ex:Schraeglagesensor dbc:decodedVia ?encoding .
+	?encoding ?property ?value .
+
+}
+

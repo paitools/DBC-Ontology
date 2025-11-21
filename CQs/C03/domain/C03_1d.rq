@@ -1,0 +1,17 @@
+# What is the current temperature in the engine room?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ex:   <http://example.org/individuals#>
+PREFIX dbc:  <http://example.org/dbc#>
+
+SELECT ?tempvalue (MAX(?timestamp) AS ?latestTime)
+WHERE {
+  ?templog a dbc:SignalLog ;
+           sosa:observedProperty ex:MaschinenraumTemperatur ;
+           sosa:hasSimpleResult ?tempvalue ;
+           sosa:resultTime ?timestamp .
+}
+GROUP BY ?tempvalue
+ORDER BY DESC(?latestTime)
+LIMIT 1

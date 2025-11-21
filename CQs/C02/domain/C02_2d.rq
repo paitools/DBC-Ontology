@@ -1,0 +1,12 @@
+# Which message identifiers (Hex IDs) are observable on the can1 CAN bus platform?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?hexid 
+WHERE {
+    ?msglog dbc:busName ex:can2 ;
+	        dbc:hasHexID ?hexid .
+}
+ORDER BY ASC(?hexid)

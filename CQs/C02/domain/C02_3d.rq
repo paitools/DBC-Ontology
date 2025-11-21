@@ -1,0 +1,13 @@
+# Which transmitter nodes are associated with the can2_sniffer sensor?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?transmitter 
+WHERE {
+    ?message dbc:hasTransmitter ?transmitter ;
+			 sosa:isObservedBy ex:can2_sniffer .
+}
+

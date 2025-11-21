@@ -1,0 +1,11 @@
+# What signals are encoded in CAN messages?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?signal
+WHERE {
+    ?signal a dbc:Signal .
+
+}
+

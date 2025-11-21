@@ -1,0 +1,11 @@
+# Which platform hosts the can1_sniffer sensor?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?platform 
+WHERE {
+    ?platform sosa:hosts ex:can2_sniffer .
+}
+

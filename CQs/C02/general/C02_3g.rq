@@ -1,0 +1,13 @@
+# Which relations link CAN messages to CAN bus platforms?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT ?message ?platform
+WHERE {
+    ?message a dbc:Message;
+	         sosa:isObservedBy ?sensor .
+    ?sensor sosa:isHostedBy ?platform .
+}
+ORDER BY ASC(?message)

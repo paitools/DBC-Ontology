@@ -1,0 +1,13 @@
+# How are sniffing sensors associated with transmitter nodes?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?sensor ?node
+WHERE {
+    ?message a dbc:Message ;	
+	         dbc:hasTransmitter ?node .
+	?sensor sosa:observes ?message .
+}
+ORDER BY ASC(?sensor)

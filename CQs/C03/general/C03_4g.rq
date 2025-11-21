@@ -1,0 +1,11 @@
+# Which CAN bus platforms transmit CAN message logs?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?platform
+WHERE {
+    ?messagelog dbc:busName ?platform .
+
+}
+

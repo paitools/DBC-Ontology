@@ -1,0 +1,12 @@
+# What signals are part of the BoeningVI CAN message?
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX ex: <http://example.org/individuals#>
+
+SELECT DISTINCT ?signal 
+WHERE {
+    ?signal dbc:isPartOf ex:BoeningVI .
+
+}
+

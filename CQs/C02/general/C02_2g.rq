@@ -1,0 +1,11 @@
+# Which CAN bus platforms are hosting the sniffing sensors?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?platform ?sensor
+WHERE {
+    ?platform sosa:hosts ?sensor .
+}
+ORDER BY ASC(?platform)

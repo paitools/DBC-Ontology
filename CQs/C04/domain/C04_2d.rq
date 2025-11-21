@@ -1,0 +1,21 @@
+# What are encoding schemas of CAN message that observes the highest number of signals?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?message ?encoding
+WHERE {
+  {
+    SELECT ?message (COUNT(DISTINCT ?signal) AS ?signalCount)
+    WHERE {
+      ?message a dbc:Message .
+      ?signal dbc:isPartOf ?message .
+    }
+    GROUP BY ?message
+    ORDER BY DESC(?signalCount)
+    LIMIT 1
+  }
+  ?signal dbc:isPartOf ?message ;
+          dbc:decodedVia ?encoding .
+}
+

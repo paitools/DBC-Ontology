@@ -1,0 +1,12 @@
+# How are signals mapped to CAN messages?
+
+PREFIX dbc:  <http://example.org/dbc#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?message ?signal
+WHERE {
+    ?message a dbc:Message .
+    ?signal dbc:isPartOf ?message .
+
+}
+
