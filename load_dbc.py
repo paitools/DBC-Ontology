@@ -10,7 +10,7 @@ import shutil
 # ---------------------------------------------------
 
 INPUT_TEMPLATE = "KGM/KGM_Template.xlsx"   # Knowledge Graph Matrix (KGM) template
-OUTPUT_EXCEL = "KGM.xlsx"              # Output - KGM populated with DBC file entries
+OUTPUT_EXCEL = "KGM.xlsx"                  # Output - KGM populated with DBC file entries
 
 DBC_FILE = "DBC/boening.dbc"
 UNIT_MAPPING_FILE = "KGM/unit_mapping.json"
@@ -212,4 +212,5 @@ if __name__ == "__main__":
     )
 
     print("\n🎉 KGM.xlsx generated successfully!")
+
 
