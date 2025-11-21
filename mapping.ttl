@@ -202,7 +202,6 @@ map:SignalLogMapping a rr:TriplesMap ;
   ] ;
 .
 
-
 #########################################################################
 #  Sensor
 #########################################################################
@@ -298,3 +297,4 @@ map:PlatformMapping a rr:TriplesMap ;
     rr:objectMap [ rr:template "http://example.org/individuals#{sosa__hosts}" ]
   ] ;
 .
+
