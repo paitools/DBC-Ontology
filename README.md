@@ -18,10 +18,6 @@ An automatically generated Ontology Specification Draft.
 
 ## CANDI User Guide
 
-
-## How to cite
-
-
 ## License
 
 All resources are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
