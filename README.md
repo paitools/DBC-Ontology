@@ -11,7 +11,7 @@ DBC is the ontology for CAN bus communication systems that extends the W3C SSN/S
 An automatically generated Ontology Specification Draft.
 
 ![Contributions](https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue)
-https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue
+
 
 ## CANDI User Guide
 
@@ -19,6 +19,9 @@ https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue
 ## How to cite
 
 
-## Licence
+## License
 
-All resources are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
+All resources are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+
+![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
+
