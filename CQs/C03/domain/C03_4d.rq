@@ -9,9 +9,10 @@ SELECT (AVG(?value) AS ?meanValue)
 WHERE {
   ?signallog a dbc:SignalLog ;
              sosa:hasSimpleResult ?value ;
-             sosa:observedProperty ex:Kraftstofftank01 ;
+             sosa:observedProperty ex:FuelTank01 ;
              sosa:resultTime ?timestamp .
 
-  FILTER(?timestamp >= "2021-01-01T00:00:00"^^xsd:dateTime)
+  FILTER(?timestamp >= "2025-01-01T00:00:00"^^xsd:dateTime)
 }
+
 
