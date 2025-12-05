@@ -6,7 +6,8 @@ PREFIX ex: <http://example.org/individuals#>
 
 SELECT DISTINCT ?message 
 WHERE {
-    ?message dbc:hasSignal ex:DruckFeuerloeschpumpe .
+    ?message dbc:hasSignal ex:FirePumpPressure .
 
 }
+
 
