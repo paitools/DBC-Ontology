@@ -8,8 +8,9 @@ PREFIX qudt: <http://qudt.org/schema/qudt/>
 
 SELECT DISTINCT ?unit 
 WHERE {
-    ?signallog sosa:observedProperty ex:Frischwassertank14 .
-	ex:Frischwassertank14 qudt:hasUnit ?unit .
+    ?signallog sosa:observedProperty ex:FreshwaterTank14 .
+	ex:FreshwaterTank14 qudt:hasUnit ?unit .
 
 }
+
 
