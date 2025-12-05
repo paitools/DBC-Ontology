@@ -6,8 +6,9 @@ PREFIX ex: <http://example.org/individuals#>
 
 SELECT DISTINCT ?encoding ?property ?value
 WHERE {
-    ex:Schraeglagesensor dbc:decodedVia ?encoding .
+    ex:Inclination dbc:decodedVia ?encoding .
 	?encoding ?property ?value .
 
 }
+
 
