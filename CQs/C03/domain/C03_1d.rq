@@ -8,10 +8,11 @@ PREFIX dbc:  <http://example.org/dbc#>
 SELECT ?tempvalue (MAX(?timestamp) AS ?latestTime)
 WHERE {
   ?templog a dbc:SignalLog ;
-           sosa:observedProperty ex:MaschinenraumTemperatur ;
+           sosa:observedProperty ex:EngineRoomTemperature ;
            sosa:hasSimpleResult ?tempvalue ;
            sosa:resultTime ?timestamp .
 }
 GROUP BY ?tempvalue
 ORDER BY DESC(?latestTime)
 LIMIT 1
+
