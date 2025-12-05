@@ -8,28 +8,26 @@ PREFIX dbc:  <http://example.org/dbc#>
 SELECT ?signal ?signalvalue ?meanvalue
 WHERE {
   {
-    # Subquery: average per signal in last 10 minutes before reference time
     SELECT ?signal (AVG(?val) AS ?meanvalue)
     WHERE {
       ?log sosa:observedProperty ?signal ;
            sosa:hasSimpleResult ?val ;
-           sosa:resultTime ?t .
-      FILTER(?t >= "2021-03-01T13:49:00"^^xsd:dateTime &&
-             ?t <= "2021-03-01T13:59:00"^^xsd:dateTime)
+           sosa:resultTime ?time .
+      FILTER(?time >= "2025-03-01T13:49:00"^^xsd:dateTime &&
+             ?time <= "2025-03-01T13:59:00"^^xsd:dateTime)
     }
     GROUP BY ?signal
   }
-
-  # Main query: actual values in same window
   ?signallog sosa:observedProperty ?signal ;
              sosa:hasSimpleResult ?signalvalue ;
              sosa:resultTime ?timestamp .
-  FILTER(?timestamp >= "2021-03-01T13:49:00"^^xsd:dateTime &&
-         ?timestamp <= "2021-03-01T13:59:00"^^xsd:dateTime)
+  FILTER(?timestamp >= "2025-03-01T13:49:00"^^xsd:dateTime &&
+         ?timestamp <= "2025-03-01T13:59:00"^^xsd:dateTime)
 
   FILTER(?signalvalue > 1.2 * ?meanvalue)
 }
 ORDER BY ?timestamp
+
 
 
 
