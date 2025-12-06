@@ -1,4 +1,4 @@
-# CANDI - Semantic Framework for CAN bus Data Decoding and Integration
+# CANDI - A Semantic Framework for CAN bus Data Modeling and System Integration
 ![Contributions](https://img.shields.io/badge/Format-RDF/XML-blue)
 ![Contributions](https://img.shields.io/badge/Format-TTL-blue)
 ![Contributions](https://img.shields.io/badge/Language-Python-blue)
